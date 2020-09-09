@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: lato;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        :root {
+            --primary: #E94560;
+            --secondary: #0F3460;
+            --light: #C7C7C7;
+            --m-20: 20px;
+            --gradient: linear-gradient(to right, #54dece, #fce423);
+            --p-5: 5rem;
+        }
+
+        .content {
+            background-color: var(--secondary);
+            padding: var(--p-5);
+        }
+
+        .heading {
+            background-image: var(--gradient);
+            padding: var(--m-20);
+        }
+
+        .description {
+            padding: var(--m-20);
+            color: var(--light);
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main class="content">
+            <h1 class="heading">
+                Hello there Developers! 👋
+            </h1>
+            <p class="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe accusamus magnam.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quisquam velit consectetur explicabo
+                ducimus veritatis inventore exercitationem temporibus atque alias a, fugiat, suscipit illo iste
+                assumenda, ut repellendus qui repudiandae.
+            </p>
+        </main>
+    </div>
+</body>
+
+</html>

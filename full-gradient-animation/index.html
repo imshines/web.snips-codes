@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: lato;
+            color: white;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .full-page {
+            min-height: 100vh;
+            background-image: linear-gradient(to right, #971762, #1a6d5e);
+            background-size: 400% 400%;
+            animation: gradientAnimation 5s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="full-page">
+        <h1>Hey! See the Background is in motion</h1>
+    </div>
+</body>
+
+</html>

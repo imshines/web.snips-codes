@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Gradient</title>
+
+    <style>
+        * {
+            margin: 0;
+            font-family: lato;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .gradient-text {
+            font-size: 40pt;
+            background: linear-gradient(to right,
+                    rgb(17, 59, 157),
+                    rgb(229, 71, 38));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="gradient-text">Welcome to web.snips</h1>
+    </div>
+</body>
+
+</html>

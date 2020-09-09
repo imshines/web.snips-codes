@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Button</title>
+</head>
+
+<style>
+    :root {
+        --btn-color: #1ED760;
+        --btn-hover: #29c05e;
+    }
+
+    * {
+        font-family: lato;
+    }
+
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .spotify-button {
+        text-transform: uppercase;
+        line-height: 1;
+        font-size: 14px;
+        padding: 1rem 3.2rem;
+        font-weight: 700;
+        outline: 0;
+        border: none;
+        cursor: pointer;
+        border-radius: 500px;
+        color: #ffffff;
+        transition: background-color 0.5s ease;
+        letter-spacing: 3px;
+        background-color: #1ED760;
+    }
+
+    .spotify-button:hover {
+        background-color: #29c05e;
+    }
+
+    .spotify-button:active {
+        border: 0.5px solid #14863c;
+    }
+
+    .outline {
+        background-color: transparent;
+        border: 2px solid #1ed760;
+        color: #1ED760;
+    }
+
+    .outline:hover {
+        color: #ffffff
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <button class="spotify-button">Normal Button</button>
+        <button class="spotify-button outline">Outline Button</button>
+    </div>
+
+</body>
+
+</html>

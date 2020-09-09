@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode toggle button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: lato;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 1rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-size: 18pt;
+            background: cornflowerblue;
+            box-shadow: 0px 2px 5px #cccccc;
+        }
+
+        .btn:active {
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn" id="toggle">Dark</button>
+    </div>
+</body>
+
+<script>
+    const body = document.querySelector('body');
+    const toggle = document.querySelector('#toggle');
+
+    toggle.addEventListener("click", () => {
+        if (toggle.innerHTML === 'Dark') {
+            body.style.backgroundColor = '#000';
+            toggle.innerHTML = 'Light'
+        } else {
+            body.style.backgroundColor = '#fff';
+            toggle.innerHTML = 'Dark';
+        }
+    })
+</script>
+
+</html>
