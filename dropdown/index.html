@@ -44,9 +44,9 @@
             border: 1px solid #cccccc;
             border-radius: 5px;
             box-shadow: 0px 2px 10px #cccccc;
-            opacity: 0;
+            visibility: hidden;
             transform: translateY(-15px);
-            transition: all 200ms ease;
+            transition: all 100ms ease;
         }
 
         .dropdown li {
@@ -62,7 +62,7 @@
         }
 
         .show {
-            opacity: 1;
+            visibility: visible;
             transform: translateY(0px);
         }
     </style>
@@ -73,7 +73,7 @@
     <div class="container">
         <div>
             <button class="btn" id="btn-toggle">
-                More &Tab; <span></span> 
+                More &Tab; <span></span>
             </button>
             <div class="dropdown" id="dropdown">
                 <ul>
@@ -88,9 +88,7 @@
 
 <script>
     let btn = document.querySelector('#btn-toggle');
-    let dropdown = document.querySelector('#dropdown');
-
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (event) => {
         dropdown.classList.toggle('show');
     });
 </script>
