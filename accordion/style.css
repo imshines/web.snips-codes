@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accordion-container{
+    width: 80%;
+    margin: 20px auto 0px;
+}
+
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #312c79;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: justify;
+    outline: none;
+}
+
+.active, .accordion:hover {
+    background-color: rgb(18, 4, 56);
+}
+
+.plus{
+    font-size: 18pt;
+}
+
+.panel {
+    overflow: hidden;
+    display: none;
+}
+
+.show{
+    margin: 0px 0px 5px 0px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
