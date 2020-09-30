@@ -35,12 +35,15 @@
 
 .toast{
     position: absolute;
+    margin: 0 auto;
     width: 60%;
     padding: 1rem;
     background-color: #cfdbf0;
     border: 1px solid #6495ed;
     border-radius: 0.2rem;
     top: -100px;
+    left: 0;
+    right: 0;
     transition: all 500ms cubic-bezier(.01,1.01,.77,1.7);
 }
 
