@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container,.sun,.moon{
+    transition: all 0.5s ease;
+}
+
+.toggle{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.sun{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.moon{
+    transform: translateY(-200px);
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.active.sun{
+    transform: translateY(200px);
+}
+
+.active.moon{
+    transform: translate(25px,-10px);
+}
+
+.dark{
+    background-color: #000000;
+}

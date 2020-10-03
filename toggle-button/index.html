@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="toggle">
+            <div class="sun"></div>
+            <div class="moon"></div>
+        </div>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container')
+        const toggle = document.querySelector('.toggle')
+        const sun = document.querySelector('.sun')
+        const moon = document.querySelector('.moon')
+
+        toggle.addEventListener("click", () => {
+            sun.classList.toggle('active');
+            moon.classList.toggle('active');
+            container.classList.toggle('dark');
+        })
+    </script>
+
+</body>
+
+</html>
