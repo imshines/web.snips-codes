@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.fill-wrapper{
+    width: 100px;
+    height: 200px;
+    border: 1px solid #000000;
+    border-top: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.droplets{
+    width: 20px;
+    height: 30px;
+    background-color: #1756ca;
+    margin-top: 10px;
+    margin-left: 40%;
+    border-radius: 47% 53% 50% 50% / 78% 79% 21% 22%;
+    animation: rain 3s ease forwards 3;    
+}
+
+.fill{
+    width: 100px;
+    height: 200px;
+    background-color: #1756ca;
+    position: absolute;
+    animation: waterFill 10s ease forwards;
+}
+
+@keyframes rain{
+    from {
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(200px);
+    }
+}
+
+@keyframes waterFill{
+    from{
+        transform: translateY(200px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
