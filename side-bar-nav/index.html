@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburger Menu</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        background-color: #80aee5;
+        height: 100vh;
+        transition: all 400ms;
+      }
+
+      .ham {
+        padding: 10px;
+      }
+
+      .ham-icon {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin: 5px 0px;
+        background: #000;
+        border-radius: 10px;
+      }
+
+      .sidebar {
+        position: absolute;
+        list-style: none;
+        top: 0;
+        bottom: 0;
+        background: #1a1a2e;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20pt;
+        margin-left: -400px;
+        transition: all 400ms;
+      }
+
+      .side-show {
+        margin-left: 0px;
+      }
+
+      .add-margin {
+        margin-left: 400px;
+      }
+
+      .item {
+        cursor: pointer;
+        margin: 20px 0px;
+        color: #c7c7c7;
+      }
+
+      .item:hover {
+        color: #e94560;
+      }
+
+      h3 {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sidebar" id="sidebar">
+      <nav class="items">
+        <li class="item">Home</li>
+        <li class="item">About</li>
+        <li class="item">Services</li>
+        <li class="item">Contact</li>
+      </nav>
+    </div>
+    <div class="container">
+      <div>
+        <div class="ham" id="ham">
+          <span class="ham-icon"></span>
+          <span class="ham-icon"></span>
+          <span class="ham-icon"></span>
+        </div>
+      </div>
+      <h3>Click on menu Hamburger to see me in action 😎</h3>
+    </div>
+  </body>
+
+  <script>
+    const hamMenu = document.querySelector("#ham");
+    const sidebar = document.querySelector("#sidebar");
+    const container = document.querySelector(".container");
+    hamMenu.addEventListener("click", function () {
+      sidebar.classList.toggle("side-show");
+      container.classList.toggle("add-margin");
+    });
+  </script>
+</html>

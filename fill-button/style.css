@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.btn{
+    width: 200px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid black;
+    position: relative;
+}
+
+.text{
+    position: absolute;
+    z-index: 1;
+    font-size: 20pt;
+    transition: all 500ms ease;
+}
+
+.effect{
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    transform: translateX(200px);
+    transition: all 500ms ease;
+    z-index: 0;
+}
+
+
+.btn:hover .text{
+    color: white;
+}
+
+.btn:hover .effect{
+    transform: translateX(0px);
+}
