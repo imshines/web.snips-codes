@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-image: linear-gradient(rgb(31, 120, 143), rgb(168, 31, 134));
+        color: #ffffff;
+      }
+      .card {
+        width: 30rem;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+      }
+      .shape-1 {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+        z-index: 1;
+        top: 30%;
+        left: 65%;
+      }
+      .shape-2 {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+        top: 60%;
+        left: 30%;
+      }
+      .card-body h2 {
+        line-height: 3rem;
+        font-size: 28px;
+      }
+      .card-body p {
+        font-size: 18px;
+      }
+      .card-body {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      .card-body div {
+        margin-left: 1rem;
+      }
+      .card-img {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="shape-1"></div>
+      <div class="shape-2"></div>
+      <div class="card">
+        <div class="card-body">
+          <img src="https://picsum.photos/100" alt="" class="card-img" />
+          <div>
+            <h2>A Glassmorphism Card</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium placeat quasi, ipsa corrupti distinctio unde veniam
+              reprehenderit? Cupiditate, asperiores id? Mollitia reiciendis
+              praesentium voluptatem aperiam, maxime et porro expedita commodi!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

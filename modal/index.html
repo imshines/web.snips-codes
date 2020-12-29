@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Lato", sans-serif;
+      }
+      .container {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .btn {
+        background-color: #1a1a2e;
+        color: #f2f2f2;
+        padding: 10px 20px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0px 3px 5px #cccccc;
+      }
+      .btn-sm {
+        background-color: #d42929;
+        color: #f2f2f2;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn:active {
+        box-shadow: none;
+      }
+      .modal {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: grid;
+        place-items: center;
+      }
+      .modal-area {
+        width: 50%;
+        height: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 30px #c4c4c4;
+        border-radius: 10px;
+      }
+      .modal-header {
+        position: relative;
+      }
+      .modal-title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18pt;
+      }
+      .modal-close {
+        font-size: 20px;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        cursor: pointer;
+      }
+      .modal-body {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+        overflow-y: scroll;
+      }
+      .modal-content {
+        margin-top: 20px;
+      }
+      .modal-footer {
+        margin: 10px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="launch-modal" class="btn">Launch Modal</button>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal-area">
+        <div class="modal-header">
+          <h3 class="modal-title">Modal Title</h3>
+          <span class="modal-close">x</span>
+        </div>
+        <div class="modal-body">
+          <p class="modal-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            quasi vero nobis cum fugiat recusandae odit voluptatum temporibus!
+            Quaerat, architecto! Ipsa repudiandae rem maiores eaque, tempore
+            molestiae soluta natus hic.
+          </p>
+          <p class="modal-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            quasi vero nobis cum fugiat recusandae odit voluptatum temporibus!
+            Quaerat, architecto! Ipsa repudiandae rem maiores eaque, tempore
+            molestiae soluta natus hic.
+          </p>
+          <p class="modal-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            quasi vero nobis cum fugiat recusandae odit voluptatum temporibus!
+            Quaerat, architecto! Ipsa repudiandae rem maiores eaque, tempore
+            molestiae soluta natus hic.
+          </p>
+          <p class="modal-content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
+            quasi vero nobis cum fugiat recusandae odit voluptatum temporibus!
+            Quaerat, architecto! Ipsa repudiandae rem maiores eaque, tempore
+            molestiae soluta natus hic.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-sm modal-close">Close</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const launch = document.querySelector("#launch-modal");
+      const modal = document.querySelector("#modal");
+      const closeModal = document.getElementsByClassName("modal-close");
+
+      launch.addEventListener("click", () => {
+        modal.style.visibility = "visible";
+      });
+
+      for (var i = 0; i < closeModal.length; i++) {
+        closeModal[i].addEventListener("click", () => {
+          modal.style.visibility = "hidden";
+        });
+      }
+    </script>
+  </body>
+</html>

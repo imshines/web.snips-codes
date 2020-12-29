@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Shapes</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #000000;
+      }
+      .object {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: #315031;
+        animation: animate 1000ms infinite alternate ease-in;
+      }
+      @keyframes animate {
+        0% {
+          clip-path: inset(0 0 0 0);
+          transform: scale(1.5);
+        }
+        25% {
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          background-color: violet;
+          transform: scale(2);
+        }
+        50% {
+          clip-path: polygon(
+            25% 0%,
+            75% 0%,
+            100% 50%,
+            75% 100%,
+            25% 100%,
+            0% 50%
+          );
+          background-color: indigo;
+          transform: scale(2.5);
+        }
+        75% {
+          clip-path: polygon(
+            50% 0%,
+            90% 20%,
+            100% 60%,
+            75% 100%,
+            25% 100%,
+            0% 60%,
+            10% 20%
+          );
+          background-color: blue;
+          transform: scale(3);
+        }
+        100% {
+          transform: scale(3.5);
+          clip-path: circle(50% at 50% 50%);
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="object"></span>
+    </div>
+  </body>
+</html>
